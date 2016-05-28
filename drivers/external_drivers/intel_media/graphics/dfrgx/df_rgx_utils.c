@@ -165,10 +165,12 @@ int df_rgx_set_governor_profile(const char *governor_name,
  */
 int df_rgx_is_max_fuse_set(void)
 {
-//	Of course we want 640MHz
-//	int fuse_val = 0;
-//	fuse_val = gpu_freq_get_max_fuse_setting();
-//	if (fuse_val == 0x4) /* 640 MHz */
-//		return 1;
-	return 1;
+	int fuse_val = 0;
+
+	fuse_val = gpu_freq_get_max_fuse_setting();
+
+	if (fuse_val == 0x4) /* 640 MHz */
+		return 1;
+
+	return 0;
 }
