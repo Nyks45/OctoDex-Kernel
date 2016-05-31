@@ -159,14 +159,12 @@ VPATH		:= $(srctree)$(if $(KBUILD_EXTMOD),:$(KBUILD_EXTMOD))
 export srctree objtree VPATH
 
 #Configs
-#CCACHE
-CCACHE := ccache
 
 #ARCH
 CARCH := x86
 
 #Toolchain
-GCC :=../x86_64-linux-linaro4.9/bin/x86_64-linux-
+GCC :=/home/nyks45/toolchain/bin/x86_64-linux-android-
 
 
 # SUBARCH tells the usermode build what the underlying arch is.  That is set
